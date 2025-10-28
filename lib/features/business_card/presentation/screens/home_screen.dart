@@ -1,8 +1,8 @@
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
-import 'dart:io';
 import '../../../../core/constants/app_constants.dart';
 import '../providers/business_card_provider.dart';
 import '../widgets/business_card_tile.dart';
@@ -149,7 +149,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       // For mobile: save and share
       // For web: download
       final file = XFile.fromData(
-        csvData.codeUnits,
+        Uint8List.fromList(csvData.codeUnits),
         mimeType: 'text/csv',
         name: AppConstants.exportFileNameCSV,
       );
@@ -167,7 +167,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           .exportToExcel();
 
       final file = XFile.fromData(
-        excelData,
+        Uint8List.fromList(excelData),
         mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         name: AppConstants.exportFileNameExcel,
       );

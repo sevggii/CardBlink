@@ -92,14 +92,14 @@ class BusinessCardRepositoryImpl implements BusinessCardRepository {
 
     // Header row
     sheet.appendRow([
-      const TextCellValue('Name'),
-      const TextCellValue('Title'),
-      const TextCellValue('Company'),
-      const TextCellValue('Email'),
-      const TextCellValue('Phone'),
-      const TextCellValue('Website'),
-      const TextCellValue('Address'),
-      const TextCellValue('Created At'),
+      TextCellValue('Name'),
+      TextCellValue('Title'),
+      TextCellValue('Company'),
+      TextCellValue('Email'),
+      TextCellValue('Phone'),
+      TextCellValue('Website'),
+      TextCellValue('Address'),
+      TextCellValue('Created At'),
     ]);
 
     // Data rows

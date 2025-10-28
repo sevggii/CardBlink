@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'core/theme/app_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'features/business_card/data/models/business_card_model.dart';
